@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nginx-deploy-s2 # tomcat
+  name: nginx121-deploy-s2 # tomcat
   labels:
-    app: nginx # tomcat
+    app: nginx121 # tomcat
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: nginx # tomcat
+      app: nginx121 # tomcat
   template:
     metadata:
       labels:
-        app: nginx # tomcat
+        app: nginx121 # tomcat
     spec:
       containers:
-      - name: nginx # tomcat
+      - name: nginx121 # tomcat
         image: nginx:1.21 # tomcat:9.0
         ports:
         - containerPort: 80
